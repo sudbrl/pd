@@ -37,7 +37,7 @@ def plot_pd_graph(years, pd_values, extrapolate_years):
 
     # Plot the results
     plt.figure(figsize=(14, 8))  # Increased figure size
-    plt.style.use('seaborn-dark')  # Use a style with a dark grid background
+    plt.style.use('seaborn-darkgrid')  # Use a valid style
 
     # Plot the data
     plt.plot(extrapolation_df['Years'], extrapolation_df['Extrapolated PD (%)'], marker='o', linestyle='-', color='b', label='Extrapolated PD', linewidth=2)
@@ -64,7 +64,6 @@ def plot_pd_graph(years, pd_values, extrapolate_years):
     plt.savefig(buf, format='png', bbox_inches='tight', dpi=300)
     buf.seek(0)
     return buf
-
 
 # Streamlit app
 st.title('PD% Extrapolation')
